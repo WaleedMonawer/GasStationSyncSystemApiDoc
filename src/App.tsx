@@ -48,6 +48,9 @@ function AppContent() {
       <main className={`transition-all duration-300 ${dir === 'rtl' ? 'md:pr-72' : 'md:pl-72'}`}>
         <div className="px-4 py-12 md:px-12 lg:px-16 max-w-7xl mx-auto">
           <DocContent />
+          <footer className="mt-16 pt-6 border-t border-zinc-200 dark:border-zinc-800 text-center text-sm text-zinc-500 dark:text-zinc-400">
+            تطوير : م.وليد منور
+          </footer>
         </div>
       </main>
     </div>
