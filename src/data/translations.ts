@@ -6,6 +6,7 @@ export const content = {
       download: 'Download Spec',
       sections: {
         overview: 'Overview',
+        howItWorks: 'How It Works',
         authentication: 'Authentication',
         transactions: 'Transactions',
         stationData: 'Station Data',
@@ -17,6 +18,22 @@ export const content = {
       title: 'Overview',
       description: 'This guide explains how to integrate with the Gas Station Sync System webhook service for real-time transaction data migration. The webhook service allows gas station systems to automatically send transaction data to the sync system for processing and ERP integration.',
       baseUrlTitle: 'Base URL'
+    },
+    howItWorks: {
+      title: 'How the API Works',
+      intro: 'This API acts as a bridge between the station system and the ERP. The flow is:',
+      step1: 'Station system is connected to devices (counters/meters) and pumps. It sends station data (counters, pumps, payment methods, shifts, currencies) and financial/transaction data at station, pump, and meter level.',
+      step2: 'The API receives this data and forwards it to the Sync Middleware.',
+      step3: 'The Sync Middleware maps data between the station system format and the ERP format.',
+      step4: 'The Sync Middleware then transfers (posts) the mapped data to the ERP system.',
+      diagramLabels: {
+        station: 'Station System',
+        stationSub: 'Devices, Pumps, Meters',
+        api: 'This API',
+        sync: 'Sync Middleware',
+        mapping: 'Mapping',
+        erp: 'ERP System'
+      }
     },
     authentication: {
       title: 'Authentication',
@@ -96,6 +113,7 @@ export const content = {
       download: 'تحميل المواصفات',
       sections: {
         overview: 'نظرة عامة',
+        howItWorks: 'كيف تعمل',
         authentication: 'المصادقة',
         transactions: 'المعاملات',
         stationData: 'بيانات المحطة',
@@ -107,6 +125,22 @@ export const content = {
       title: 'نظرة عامة',
       description: 'يشرح هذا الدليل كيفية التكامل مع خدمة الويب هوك لنظام مزامنة محطات الوقود لترحيل بيانات المعاملات في الوقت الفعلي. تتيح الخدمة لأنظمة المحطات إرسال البيانات تلقائياً للمعالجة والتكامل مع نظام تخطيط الموارد (ERP).',
       baseUrlTitle: 'الرابط الأساسي (Base URL)'
+    },
+    howItWorks: {
+      title: 'كيف تعمل الواجهة البرمجية',
+      intro: 'تعمل هذه الواجهة البرمجية كوسيط بين نظام المحطة ونظام الـ ERP. المسار كالتالي:',
+      step1: 'نظام المحطة متصل بالأجهزة (العدادات/المقاييس) والمضخات. يرسل بيانات المحطة (العدادات، المضخات، طرق الدفع، الورديات، العملات) وبيانات العمليات المالية على مستوى المحطة والمضخة والعداد.',
+      step2: 'الواجهة البرمجية تستقبل هذه البيانات وتمررها إلى نظام المزامنة الوسيط.',
+      step3: 'نظام المزامنة الوسيط يقوم بعمل ربط (Mapping) للبيانات بين صيغة نظام المحطة وصيغة نظام الـ ERP.',
+      step4: 'ثم يترحّل نظام المزامنة الوسيط البيانات المرتبطة إلى نظام الـ ERP.',
+      diagramLabels: {
+        station: 'نظام المحطة',
+        stationSub: 'أجهزة، مضخات، عدادات',
+        api: 'هذه الواجهة (API)',
+        sync: 'نظام المزامنة الوسيط',
+        mapping: 'ربط البيانات',
+        erp: 'نظام الـ ERP'
+      }
     },
     authentication: {
       title: 'المصادقة',

@@ -23,7 +23,7 @@ function AppContent() {
   // Update active section on scroll
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['overview', 'authentication', 'transactions', 'station-data', 'health', 'best-practices'];
+      const sections = ['overview', 'how-it-works', 'authentication', 'transactions', 'station-data', 'health', 'best-practices'];
       
       for (const section of sections) {
         const element = document.getElementById(section);

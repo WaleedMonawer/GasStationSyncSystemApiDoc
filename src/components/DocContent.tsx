@@ -39,6 +39,58 @@ export function DocContent() {
         </div>
       </motion.section>
 
+      {/* How It Works Section */}
+      <motion.section
+        id="how-it-works"
+        className="scroll-mt-24 mb-16"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        variants={sectionVariants}
+      >
+        <h2 className="text-3xl font-bold text-zinc-900 dark:text-white mb-6">{t.howItWorks.title}</h2>
+        <p className="text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed mb-6">
+          {t.howItWorks.intro}
+        </p>
+
+        <div className="overflow-x-auto py-6 mb-8">
+          <div className="min-w-[640px] flex items-stretch justify-center gap-0" style={{ direction: 'ltr' }}>
+            <div className="flex items-center gap-2 flex-1 min-w-0">
+              <div className="flex-1 rounded-xl border-2 border-amber-200 dark:border-amber-800 bg-amber-50 dark:bg-amber-900/20 p-4 text-center">
+                <div className="font-semibold text-amber-900 dark:text-amber-200">{t.howItWorks.diagramLabels.station}</div>
+                <div className="text-xs text-amber-700 dark:text-amber-400 mt-1">{t.howItWorks.diagramLabels.stationSub}</div>
+              </div>
+              <div className="flex-shrink-0 text-zinc-400 dark:text-zinc-500">→</div>
+            </div>
+            <div className="flex items-center gap-2 flex-1 min-w-0">
+              <div className="flex-1 rounded-xl border-2 border-indigo-200 dark:border-indigo-800 bg-indigo-50 dark:bg-indigo-900/20 p-4 text-center">
+                <div className="font-semibold text-indigo-900 dark:text-indigo-200">{t.howItWorks.diagramLabels.api}</div>
+              </div>
+              <div className="flex-shrink-0 text-zinc-400 dark:text-zinc-500">→</div>
+            </div>
+            <div className="flex items-center gap-2 flex-1 min-w-0">
+              <div className="flex-1 rounded-xl border-2 border-emerald-200 dark:border-emerald-800 bg-emerald-50 dark:bg-emerald-900/20 p-4 text-center">
+                <div className="font-semibold text-emerald-900 dark:text-emerald-200">{t.howItWorks.diagramLabels.sync}</div>
+                <div className="text-xs text-emerald-700 dark:text-emerald-400 mt-1">{t.howItWorks.diagramLabels.mapping}</div>
+              </div>
+              <div className="flex-shrink-0 text-zinc-400 dark:text-zinc-500">→</div>
+            </div>
+            <div className="flex-1 min-w-0">
+              <div className="rounded-xl border-2 border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800/50 p-4 text-center">
+                <div className="font-semibold text-slate-900 dark:text-slate-200">{t.howItWorks.diagramLabels.erp}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <ol className="list-decimal list-inside space-y-4 text-zinc-600 dark:text-zinc-400">
+          <li><span className="font-medium text-zinc-800 dark:text-zinc-200">{t.howItWorks.step1}</span></li>
+          <li><span className="font-medium text-zinc-800 dark:text-zinc-200">{t.howItWorks.step2}</span></li>
+          <li><span className="font-medium text-zinc-800 dark:text-zinc-200">{t.howItWorks.step3}</span></li>
+          <li><span className="font-medium text-zinc-800 dark:text-zinc-200">{t.howItWorks.step4}</span></li>
+        </ol>
+      </motion.section>
+
       {/* Authentication Section */}
       <motion.section 
         id="authentication" 

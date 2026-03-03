@@ -1,4 +1,4 @@
-import { Menu, X, BookOpen, Server, Shield, Activity, Languages } from 'lucide-react';
+import { Menu, X, BookOpen, Server, Shield, Activity, Languages, GitBranch } from 'lucide-react';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useLanguage } from '../context/LanguageContext';
@@ -11,6 +11,7 @@ interface SidebarProps {
 
 const sections = [
   { id: 'overview', icon: BookOpen, key: 'overview' },
+  { id: 'how-it-works', icon: GitBranch, key: 'howItWorks' },
   { id: 'authentication', icon: Shield, key: 'authentication' },
   { id: 'transactions', icon: Activity, key: 'transactions' },
   { id: 'station-data', icon: Server, key: 'stationData' },
